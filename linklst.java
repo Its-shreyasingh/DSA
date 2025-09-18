@@ -26,15 +26,21 @@ public class linklst {
         }
         return head;
     }
-    public static void main(String[] args)
+    private static int lengthofll(Node head)
     {
-        int[] arr={2,3,5,6};
-        Node head=convertarr2ll(arr);
+        int count=0;
         Node temp=head;
         while(temp !=null)
         {
-            System.out.print(temp.data+" ");
             temp=temp.next;
+            count++;
         }
+        return count;
+    }
+    public static void main(String[] args)
+    {
+        int[] arr={2,3,5,6,3,5,8};
+        Node head=convertarr2ll(arr);
+        System.out.println("Length of the Linklist is:"+lengthofll(head));
     }
 }
