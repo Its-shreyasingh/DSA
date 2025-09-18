@@ -30,6 +30,11 @@ public class linklst {
     {
         int[] arr={2,3,5,6};
         Node head=convertarr2ll(arr);
-        System.out.println(head.data);
+        Node temp=head;
+        while(temp !=null)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
     }
 }
