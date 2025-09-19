@@ -52,20 +52,20 @@ public class linklst {
         }
         return 0;
     }
+    private static Node removehead(Node head)
+    {
+        if(head!=null)                      //deletion of head
+        {
+            head=head.next;
+        }
+        return head;
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
         int[] arr={2,3,5,6,3,5,8};
         Node head=convertarr2ll(arr);
-        System.out.println("Enter the value to be searched");
-        int val=sc.nextInt();
-        int result=checkforval(head,val);
-        if(result==1){
-            System.out.println("Value searched in linklist is present");
-        }
-        else{
-            System.out.println("Value searched in linklist is not present");
-        }
-        
+        head=removehead(head);
+        System.out.println(head.data);
     }
 }
