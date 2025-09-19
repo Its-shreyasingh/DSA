@@ -52,20 +52,30 @@ public class linklst {
         }
         return 0;
     }
-    private static Node removehead(Node head)
+    private static void print(Node head)
     {
-        if(head!=null)                      //deletion of head
+        while(head!=null)
         {
+            System.out.print(head.data +" ");
             head=head.next;
         }
+        System.out.println();
+    }
+    private static Node removehead(Node head)
+    {
+        if(head==null)                      //deletion of head
+        {
+            return head;
+        }
+        head=head.next;
         return head;
     }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        int[] arr={2,3,5,6,3,5,8};
+        int[] arr={2,3,4,5,6,7};
         Node head=convertarr2ll(arr);
         head=removehead(head);
-        System.out.println(head.data);
+        print(head);
     }
 }
