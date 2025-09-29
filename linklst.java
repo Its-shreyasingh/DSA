@@ -70,6 +70,14 @@ public class linklst {
         head=head.next;
         return head;
     }
+    private static removetail(node head)
+    {
+        while(head == head|| head.next==null)
+        {
+            Node head=temp;
+        }
+        return head;
+    }
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);

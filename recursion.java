@@ -13,7 +13,7 @@ public class recursion {
     public static void main(String[] args) {
         {
             Scanner sc=new Scanner(System.in);
-            System.out.println("Enter the Number of times the name has to be printed");
+            System.out.println("Enter the number of times the name has to be printed");
             int n=sc.nextInt();
             fib(1,n);
         }
